@@ -1,5 +1,3 @@
-using System.Runtime.CompilerServices;
-
 namespace project
 {
     public partial class CryptoListVisualtisation : Form
@@ -24,12 +22,6 @@ namespace project
 
             dataGridView1.AutoGenerateColumns = true;
             dataGridView1.DataSource = p_cryptoDtos;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //dataGridView1.DataSource = cryptoDtos.Where(it => it.Volume > 1000).ToList();
-            dataGridView1.DataSource = p_cryptoDtos.OrderByDescending(i => i.QuoteAsset).ToList();
         }
 
         private void dataGridView1_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
